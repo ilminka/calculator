@@ -14,8 +14,74 @@ var divide = function(number1, number2) {
   return number1 / number2;
 };
 
-var number1 = parseInt(prompt("Enter a number:"));
+$(document).ready(function()  {
+    $("form#math").submit(function(event) {
+      event.preventDefault();
+      var number1 = parseInt($("#math1").val());
+      var number2 = parseInt($("#math2").val());
+      var result = add(number1, number2);
+      console.log(result);
+      $("#output").text(result);
+  });
 
-var number2 = parseInt(prompt("Enter another number:"));
+  $("form#math").submit(function(event) {
+     event.preventDefault();
+     var number1 = parseInt($("#math1").val());
+     var number2 = parseInt($("#math2").val());
+     var result = subtract(number1, number2);
+     console.log(result);
+     $("#output").text(result);
+   });
 
-alert(divide(number1, number2));
+   $("form#math").submit(function(event) {
+       event.preventDefault();
+       var number1 = parseInt($("#math1").val());
+       var number2 = parseInt($("#math2").val());
+       var result = multiply(number1, number2);
+       console.log(result);
+       $("#output").text(result);
+     });
+
+     $("form#math").submit(function(event) {
+         event.preventDefault();
+         var number1 = parseInt($("#math1").val());
+         var number2 = parseInt($("#math2").val());
+         var result = divide(number1, number2);
+         console.log(result);
+         $("#output").text(result);
+       });
+});
+
+// $(document).ready(function() {
+//   $("form#math").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#math1").val());
+//     var number2 = parseInt($("#math2").val());
+//     var result = add(number1, number2);
+//     $("#output").text(result);
+//   });
+//
+//   $("form#math").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#math1").val());
+//     var number2 = parseInt($("#math2").val());
+//     var result = subtract(number1, number2);
+//     $("#output").text(result);
+//   });
+//
+//   $("form#math").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#math1").val());
+//     var number2 = parseInt($("#math2").val());
+//     var result = multiply(number1, number2);
+//     $("#output").text(result);
+//   });
+//
+//   $("form#math").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#math1").val());
+//     var number2 = parseInt($("#math2").val());
+//     var result = divide(number1, number2);
+//     $("#output").text(result);
+//   });
+// });
